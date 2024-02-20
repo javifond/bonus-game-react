@@ -1,0 +1,9 @@
+// Screens Container
+
+// Blocks
+.gameContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: $gutter-xxl;
+  padding: $gutter;
+}

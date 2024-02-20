@@ -1,0 +1,29 @@
+// Header
+
+// Variables
+$creditFontSize: 18px;
+$animation-duration: 2s;
+
+// Blocks
+.header {
+  align-items: center;
+  color: $light;
+  display: flex;
+  justify-content: space-between;
+  height: $header-height;
+  padding: $gutter;
+}
+
+.creditContainer {
+  display: flex;
+  gap: $gutter-s;
+  font-size: $creditFontSize;
+}
+
+.credit {
+  font-weight: 700;
+}
+
+.updateCredit {
+  animation: heartBeat $animation-duration ease-in-out;
+}

@@ -1,0 +1,103 @@
+// SpinnerWheel
+
+// Variables
+$animation-duration: 3s;
+$animation-delay: 1s;
+$wheel-size: 300px;
+$portionAngle: $wheel-size / 16; // 18.75px
+$baseAngle: 45deg;
+$rotationAngle: 45deg;
+$credit-font-size: 24px;
+
+// Blocks
+.wheelWrapper {
+  position: relative;
+  padding: $gutter;
+}
+
+.pointer {
+  border-style: solid;
+  border-width: 64px 16px 0 16px;
+  border-color: #efcb1b transparent transparent transparent;
+  height: 0px;
+  left: calc(50% - 16px);
+  position: absolute;
+  transform: rotate(0deg);
+  top: 0;
+  width: 0px;
+  z-index: 1;
+}
+
+.wheel {
+  background-color: $wheel-bg;
+  border-radius: 50%;
+  box-shadow: 0px 0px 16px 8px rgba(0, 0, 0, 0.35);
+  display: block;
+  height: $wheel-size;
+  position: relative;
+  width: $wheel-size;
+}
+
+.line {
+  border: 1px solid $wheel-dividers;
+  height: 0;
+  width: 100%;
+  position: absolute;
+  top: calc(50% - 1px);
+
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      transform: rotate($baseAngle + $i * $rotationAngle);
+    }
+  }
+}
+
+.creditWrapper {
+  $top: (
+    1: 2,
+    2: 5,
+    3: 9,
+    4: 12,
+    5: 12,
+    6: 9,
+    7: 5,
+    8: 2,
+  );
+
+  @each $position, $value in $top {
+    & .credit:nth-child(#{$position}) {
+      top: calc($value * $portionAngle);
+    }
+  }
+
+  $left: (
+    1: 9,
+    2: 12,
+    3: 12,
+    4: 9,
+    5: 5,
+    6: 2,
+    7: 2,
+    8: 5,
+  );
+
+  @each $position, $value in $left {
+    & .credit:nth-child(#{$position}) {
+      left: calc($value * $portionAngle);
+    }
+  }
+}
+
+.credit {
+  color: $wheel-text-color;
+  font-weight: 700;
+  font-size: $credit-font-size;
+  position: absolute;
+}
+
+.rotateWheel {
+  animation-timing-function: ease-in-out;
+  animation-duration: $animation-duration;
+  animation-delay: $animation-delay;
+  animation-fill-mode: forwards;
+}

@@ -1,0 +1,19 @@
+// Title Screen
+$animation-duration: 1s;
+
+// Blocks
+.titleScreen {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  color: $title-color;
+  margin-bottom: $gutter-xl;
+  text-align: center;
+}
+
+.fadeOut {
+  animation: fadeOut $animation-duration ease forwards;
+}

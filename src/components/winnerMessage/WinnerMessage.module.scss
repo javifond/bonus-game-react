@@ -1,0 +1,20 @@
+// Winner Message
+
+// Variables
+$message-font-size: 24px;
+$animation-duration: 2s;
+
+// Blocks
+.message {
+  color: $light;
+  font-size: $message-font-size;
+}
+
+.credit {
+  color: $credits-color;
+  font-weight: 700;
+}
+
+.animateMessage {
+  animation: heartBeat $animation-duration ease;
+}

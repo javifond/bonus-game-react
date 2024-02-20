@@ -1,0 +1,28 @@
+// Colors - Theme
+
+// Color Palette
+$_light: #fff;
+$_dark: #000;
+$_text-color: #888;
+$_app-background: #fff;
+$_title-color: #26f7a3;
+$_button-bg: #26f7e6;
+$_button-color: #1c0585;
+$_credits-color: #12cc5f;
+$_wheel-bg: #35d1d6;
+$_wheel-dividers: #0c632b92;
+$_wheel-text-color: #0b1b58;
+
+// CSS Variables definition for theming
+// c- stands for custom-
+$light: var(--c-light, $_light);
+$dark: var(--c-dark, $_dark);
+$text-color: var(--c-text-color, $_text-color);
+$app_background: var(--c-app_background, $_app_background);
+$title-color: var(--c-title-color, $_title-color);
+$button-bg: var(--c-button-bg, $_button-bg);
+$button-color: var(--c-button-color, $_button-color);
+$credits-color: var(--c-credits-color, $_credits-color);
+$wheel-bg: var(--c-wheel-bg, $_wheel-bg);
+$wheel-dividers: var(--c-wheel-dividers, $_wheel-dividers);
+$wheel-text-color: var(--c-wheel-text-color, $_wheel-text-color);

@@ -1,0 +1,11 @@
+// Bonus Screen
+
+// Blocks
+.bonusScreen {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: $gutter-xl;
+  width: 100%;
+}
