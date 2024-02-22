@@ -4,7 +4,7 @@
 $animation-duration: 3s;
 $animation-delay: 1s;
 $wheel-size: 300px;
-$portionAngle: $wheel-size / 16; // 18.75px
+$portionAngle: calc($wheel-size / 16); // 18.75px
 $baseAngle: 45deg;
 $rotationAngle: 45deg;
 $credit-font-size: 24px;
